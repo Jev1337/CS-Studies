@@ -57,9 +57,9 @@
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
   <ol>
     <li>
-      <a href="#about-the-corrections">About The Project</a>
+      <a href="#about-the-corrections">About The Corrections</a>
       <ul>
-        <li><a href="#coded-with">Built With</a></li>
+        <li><a href="#coded-with">Coded With</a></li>
       </ul>
     </li>
     <li>
