@@ -79,7 +79,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<div align="center"><img src="icon.png" alt="Logo" width="566" height="402"></div>
+<div align="center"><img src="icon.png" alt="Logo" width="135" height="135"></div>
 
 
 ### Coded With
