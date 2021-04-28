@@ -54,7 +54,7 @@ f:text;
 			for i:= 1 to NbTrait-1 do      // T (Array) -> U (Array)     nbtrait-1 = longeur du tableau U
 				U[i]:= t[i+1]-t[i];         // Calculer la difference entre t[i+1] et t[i] et la mettre dans U[i]
 
-			for i:= 1 to NbTrait-1 Do    // Rechercher dans U le nombre de répétitions successives puis parcourrir le même nombre dans le tableau T (en utilisant une formule i-k to i+1) 
+			for i:= 1 to NbTrait-1 Do    // Rechercher dans U le nombre de rÃ©pÃ©titions successives puis parcourrir le mÃªme nombre dans le tableau T (en utilisant une formule i-k to i+1) 
 			Begin
 				 if U[i] = U[i+1] Then
 							k:=k+1
