@@ -33,7 +33,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/Jev1337/Pascal-Studies">
-    <img src="AFK.png" alt="Logo" width="80" height="80">
+    <img src="explorer_0KnDLzyOVG.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Yasmine ANTI-AFK System</h3>
@@ -81,7 +81,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<div align="center"><img src="explorer_0KnDLzyOVG.png" alt="Logo" width="566" height="402"></div>
+<div align="center"><img src="icon.png" alt="Logo" width="566" height="402"></div>
 
 
 ### Coded With
