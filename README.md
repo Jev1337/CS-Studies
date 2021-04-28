@@ -79,7 +79,7 @@
 <!-- ABOUT THE Corrections -->
 ## About The Corrections
 
-<div align="center"><img src="icon.png" alt="Logo" width="135" height="135" style="border:0px;margin:100px;clear:both;"> X <img src="fpc.png" alt="Logo" width="135" height="135" style="border:0px;margin:100px;clear:both;"></div>
+<div align="center"><img src="icon.png" alt="Logo" width="135" height="135" style="border:0px;margin:100px;clear:both;"> + <img src="fpc.png" alt="Logo" width="135" height="135" style="border:0px;margin:100px;clear:both;"></div>
 
 
 ### Coded With
