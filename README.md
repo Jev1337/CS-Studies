@@ -99,7 +99,7 @@ Note that Records are replaced with Arrays of Records due to Covid-19 affecting 
 
 PascalXE (Latest Ones Cause Errors // Make sure to download this most stable one):
 * https://sourceforge.net/projects/pascalxe/files/Pascal%20XE-2.1.0.322-Setup.exe/download
-OR
+<br>OR
 PCompiler:
 * https://hotdogishot.github.io/PCompiler/
 
