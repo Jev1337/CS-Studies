@@ -57,7 +57,7 @@
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about-the-corrections">About The Project</a>
       <ul>
         <li><a href="#coded-with">Built With</a></li>
       </ul>
@@ -76,7 +76,7 @@
 
 
 
-<!-- ABOUT THE PROJECT -->
+<!-- ABOUT THE Corrections -->
 ## About The Corrections
 
 <div align="center"><img src="icon.png" alt="Logo" width="135" height="135"></div>
