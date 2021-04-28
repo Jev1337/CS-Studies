@@ -79,7 +79,7 @@
 <!-- ABOUT THE Corrections -->
 ## About The Corrections
 
-<div align="center"><img src="icon.png" alt="Logo" width="135" height="135" style="border:0px;margin:100px;clear:both;"> + <img src="fpc.png" alt="Logo" width="135" height="135" style="border:0px;margin:100px;clear:both;"></div>
+<div align="center"><a href="https://sourceforge.net/projects/pascalxe/files/Pascal%20XE-2.1.0.322-Setup.exe/download"><img src="icon.png" alt="Logo" width="135" height="135" style="border:0px;margin:100px;clear:both;"></a> + <a href="https://www.freepascal.org/"><img src="fpc.png" alt="Logo" width="135" height="135" style="border:0px;margin:100px;clear:both;"></a></div>
 
 
 ### Coded With
@@ -94,7 +94,7 @@ To get started, You have to download a Pascal Compiler, I personally use PascalX
 
 ### Prerequisites
 
-PascalXE:
+PascalXE (MOST STABLE VERSION):
 * https://sourceforge.net/projects/pascalxe/files/Pascal%20XE-2.1.0.322-Setup.exe/download
 
 <!-- USAGE EXAMPLES -->
