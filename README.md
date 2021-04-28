@@ -77,7 +77,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## About The Corrections
 
 <div align="center"><img src="icon.png" alt="Logo" width="135" height="135"></div>
 
