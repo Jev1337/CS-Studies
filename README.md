@@ -39,14 +39,14 @@
   <h3 align="center">Pascal Studies // BAC Version</h3>
 
   <p align="center">
-    An advanced Anti AFK system to prevent AFK consequences.
+    My Personal Pascal Corrections for Tunisia's National Exams.
     <br />
-    <a href="https://github.com/Jev1337/Pascal-Studies"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Jev1337/Pascal-Studies"><strong>Explore the Pascal files »</strong></a>
     <br />
     <br />
     <a href="https://github.com/Jev1337/Pascal-Studies/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Jev1337/Pascal-Studies/issues">Request Feature</a>
+    <a href="https://github.com/Jev1337/Pascal-Studies/issues">Request Change</a>
   </p>
 </p>
 
