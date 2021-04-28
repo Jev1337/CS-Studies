@@ -79,7 +79,7 @@
 <!-- ABOUT THE Corrections -->
 ## About The Corrections
 
-<div align="center"><a href="https://sourceforge.net/projects/pascalxe/files/Pascal%20XE-2.1.0.322-Setup.exe/download"><img src="icon.png" alt="Logo" width="135" height="135" style="border:0px;margin:100px;clear:both;"></a> + <a href="https://www.freepascal.org/"><img src="fpc.png" alt="Logo" width="135" height="135" style="border:0px;margin:100px;clear:both;"></a></div>
+<div align="center"><a href="https://sourceforge.net/projects/pascalxe/"><img src="icon.png" alt="Logo" width="135" height="135" style="border:0px;margin:100px;clear:both;"></a> + <a href="https://www.freepascal.org/"><img src="fpc.png" alt="Logo" width="135" height="135" style="border:0px;margin:100px;clear:both;"></a></div>
 
 
 ### Coded With
@@ -90,11 +90,11 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get started, You have to download a Pascal Compiler, I personally use PascalXE which is a free IDE. To install PascalXE, you can find the link down below.
+To get started, You have to download a Pascal Compiler, I personally use PascalXE (due to School regulations) which is a free IDE. To install PascalXE, you can find the link down below. One more thing I want to say that no Delphi can be involved in the Pascal Corrections!
 
 ### Prerequisites
 
-PascalXE (MOST STABLE VERSION):
+PascalXE (Latest Ones Cause Errors // Make sure to download this most stable one):
 * https://sourceforge.net/projects/pascalxe/files/Pascal%20XE-2.1.0.322-Setup.exe/download
 
 <!-- USAGE EXAMPLES -->
