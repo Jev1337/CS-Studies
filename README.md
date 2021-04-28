@@ -59,7 +59,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#coded-with">Built With</a></li>
       </ul>
     </li>
     <li>
@@ -68,7 +68,7 @@
         <li><a href="#prerequisites">Prerequisites</a></li>
       </ul>
     </li>
-    <li><a href="#Coded With">Usage</a></li>
+    <li><a href="#usage">Usage</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
@@ -94,7 +94,7 @@ To get started, You have to download a Pascal Compiler, I personally use PascalX
 
 ### Prerequisites
 
-You will basically need .NET Framework for the program to work!
+PascalXE:
 * https://sourceforge.net/projects/pascalxe/files/Pascal%20XE-2.1.0.322-Setup.exe/download
 
 <!-- USAGE EXAMPLES -->
@@ -105,7 +105,7 @@ Run any .Pas file I uploaded then click on Execute button.
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/Jev1337/AntiAFK/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/Jev1337/Pascal-Studies/issues) for a list of proposed features (and known issues).
 
 
 
@@ -119,7 +119,7 @@ Distributed under the Apache 2.0 License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Project Link: [https://github.com/Jev1337/Pascal-Studies](https://github.com/Jev1337/AntiAFK)
+Project Link: [https://github.com/Jev1337/Pascal-Studies](https://github.com/Jev1337/Pascal-Studies)
 
 
 
