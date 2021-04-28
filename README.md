@@ -36,7 +36,7 @@
     <img src="explorer_0KnDLzyOVG.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Yasmine ANTI-AFK System</h3>
+  <h3 align="center">Pascal Studies // BAC Version</h3>
 
   <p align="center">
     An advanced Anti AFK system to prevent AFK consequences.
