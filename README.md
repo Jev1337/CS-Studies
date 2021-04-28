@@ -90,7 +90,7 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get started, You have to download a Pascal Compiler, I personally use PascalXE (due to School regulations) which is a free IDE. To install PascalXE, you can find the link down below. One more thing I want to say that no Delphi can be involved in the Pascal Corrections!
+To get started, You have to download a Pascal Compiler, I personally use PascalXE (due to School regulations) which is a free IDE. To install PascalXE, you can find the link down below. One more thing I want to say that no Delphi can be involved in the Pascal Corrections! The only library (import/uses) than can be used is Wincrt/Crt.
 
 ### Prerequisites
 
