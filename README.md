@@ -129,13 +129,13 @@ Project Link: [https://github.com/Jev1337/Pascal-Studies](https://github.com/Jev
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/Jev1337/Pascal-Studies.svg?style=for-the-badge
-[contributors-url]: https://github.com/Jev1337/Pascal-Studies/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Jev1337/Pascal-Studies.svg?style=for-the-badge
-[forks-url]: https://github.com/Jev1337/Pascal-Studies/network/members
-[stars-shield]: https://img.shields.io/github/stars/Jev1337/Pascal-Studies.svg?style=for-the-badge
-[stars-url]: https://github.com/Jev1337/Pascal-Studies/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Jev1337/Pascal-Studies.svg?style=for-the-badge
-[issues-url]: https://github.com/Jev1337/Pascal-Studies/issues
-[license-shield]: https://img.shields.io/github/license/Jev1337/Pascal-Studies?style=for-the-badge
-[license-url]: https://github.com/Jev1337/Pascal-Studies/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/Jev1337/CS-Studies.svg?style=for-the-badge
+[contributors-url]: https://github.com/Jev1337/CS-Studies/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Jev1337/CS-Studies.svg?style=for-the-badge
+[forks-url]: https://github.com/Jev1337/CS-Studies/network/members
+[stars-shield]: https://img.shields.io/github/stars/Jev1337/CS-Studies.svg?style=for-the-badge
+[stars-url]: https://github.com/Jev1337/CS-Studies/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Jev1337/CS-Studies.svg?style=for-the-badge
+[issues-url]: https://github.com/Jev1337/CS-Studies/issues
+[license-shield]: https://img.shields.io/github/license/Jev1337/CS-Studies?style=for-the-badge
+[license-url]: https://github.com/Jev1337/CS-Studies/blob/master/LICENSE.txt
