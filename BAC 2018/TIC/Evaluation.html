@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Document sans nom</title>
+<style type="text/css">
+<!--
+.Style2 {font-weight: bold}
+-->
+</style>
+<script language="javascript">
+	function Generer(){
+		ch='';
+		for (i=1; i<=10;i++){
+		alpha = 'aBcDeFgHiJkLmNoPqRsTuVwXyZ';
+		K=Math.floor(Math.random() * 27); 
+		ch= ch + alpha.charAt(K);
+		}
+		return ch;
+	}
+	function GenererCaptcha(){
+		form1.textbox1.value = Generer();
+	}
+	function Verif(){
+		if(form1.S.options.selectedIndex == 0){
+			alert('Erreur 01: Veuillez Selectionnez un hôtel!');
+			return false;
+		}
+		if(form1.R1[0].checked == false && form1.R1[1].checked == false && form1.R1[2].checked == false){
+			alert("Erreur 02: Veuillez Selectionnez une evaluation pour l'accueil!");
+			return false;
+		}
+		if(form1.R2[0].checked == false && form1.R2[1].checked == false && form1.R2[2].checked == false){
+			alert("Erreur 03: Veuillez Selectionnez une evaluation pour la restauration!");
+			return false;
+		}
+		j=0; //init
+		for (i=0;i<form1.textbox1.value.length;i++){
+			if (form1.textbox1.value.charAt(i).toUpperCase() == form1.textbox1.value.charAt(i)){
+				j++;
+			}
+		}
+		if(form1.textbox2.value != j){
+			alert("Erreur 04: Captcha Incorrecte!");
+			return false;
+		}
+		
+	}
+</script>
+</head>
+
+<body>
+<form action="Evaluation.php" method="post" name="form1" class="Style2" id="form1" onsubmit="return Verif();">
+  <div align="center">
+    <fieldset>
+      <legend><em>Evaluation d'un hôtel<br />
+        </em></legend>
+      <div align="left">H&ocirc;tel: 
+        <label>
+        <select name="S" id="S">
+          <option>Choisir un h&ocirc;tel</option>
+          <option value="10">5 Stars</option>
+          <option value="20">Globe</option>
+          <option value="30">The Sun</option>
+        </select>
+        </label>
+        <table width="577" height="153" border="1" cellspacing="4" bordercolor="#000000">
+          <tr>
+            <td>Accueil :</td>
+            <td><p>
+              <label>
+                <input type="radio" name="R1" value="3"/>
+                Très satisfaisant</label>
+              <br />
+              <label>
+                <input type="radio" name="R1" value="2" />
+                Satisfaisant</label>
+              <br />
+              <label>
+                <input type="radio" name="R1" value="1" />
+                Peu satisfaisant</label>
+              <br />
+            </p></td>
+          </tr>
+          <tr>
+            <td>Restauration:</td>
+            <td><label>
+              <input type="radio" name="R2" value="3" />
+Tr&egrave;s satisfaisant</label>
+              <br />
+              <label>
+              <input type="radio" name="R2" value="2" />
+Satisfaisant</label>
+              <br />
+              <label>
+              <input type="radio" name="R2" value="1" />
+Peu satisfaisant</label></td>
+          </tr>
+          <tr>
+            <td>Extra:</td>
+            <td><label>
+              <input type="radio" name="R3" value="4"/> 
+              Piscine couverte
+</label>
+              <br />
+              <label>
+              <input type="radio" name="R4" value="2" /> 
+              Plage priv&eacute;e
+</label>
+              <br />
+              <label>
+              <input type="radio" name="R5" value="1" /> 
+              Couverture Wifi
+</label></td>
+          </tr>
+          <tr>
+            <td colspan="2"><p>Captcha: 
+              <label>
+              <input name="textbox1" type="text" id="textbox1" />
+              </label>
+              <label>
+              <input type="button" name="Submit" value="Actualiser" onclick="GenererCaptcha();"/>
+              </label>
+              <br />
+              Combien de lettres majiscules dans la zone Captcha? <br />
+              Reponse: 
+              <label>
+              <input name="textbox2" type="text" id="textbox2" />
+              </label>
+              <br />
+            </p>
+            </td>
+          </tr>
+        </table>
+        <p>
+          <label>
+          <input type="reset" name="Submit2" value="Annuler" />
+          </label>
+          <label>
+          <input type="submit" name="Submit3" value="Valider" />
+          </label>
+        </p>
+      </div>
+    </fieldset>
+  </div>
+</form>
+<script language="javascript">
+	GenererCaptcha();
+</script>
+</body>
+</html>
