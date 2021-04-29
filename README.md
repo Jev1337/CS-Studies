@@ -102,11 +102,10 @@ No Regex can be used in both PHP and JS.<br>
 Note that PHP is the deprecated version.<br>
 
 ### Prerequisites
-*
-PascalXE / PCompiler:
+
+PascalXE / PCompiler / Easyphp 2.0::
 * https://sourceforge.net/projects/pascalxe/files/Pascal%20XE-2.1.0.322-Setup.exe/download
 * https://hotdogishot.github.io/PCompiler/ <br>
-Easyphp 2.0:
 * https://phpsources.net/script/php/easyphp/78-5_easyphp,2.0b1
 <!-- USAGE EXAMPLES -->
 ## Usage
