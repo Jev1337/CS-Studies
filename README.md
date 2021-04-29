@@ -36,12 +36,12 @@
     <img src="explorer_0KnDLzyOVG.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Pascal Studies // BAC Version</h3>
+  <h3 align="center">Computer Science Studies // BAC Version</h3>
 
   <p align="center">
-    My Personal Pascal Corrections for Tunisia's National Exams.
+    My Personal Corrections for Tunisia's National Exams for Computer Science (CS/SI).
     <br />
-    <a href="https://github.com/Jev1337/Pascal-Studies"><strong>Explore the Pascal files »</strong></a>
+    <a href="https://github.com/Jev1337/Pascal-Studies"><strong>Explore the files »</strong></a>
     <br />
     <br />
     <a href="https://github.com/Jev1337/Pascal-Studies/issues">Report Bug</a>
@@ -90,21 +90,35 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get started, You have to download a Pascal Compiler, I personally use PascalXE. I also recommend PCompiler (a web based IDE that a friend made). 
-To install PascalXE or the Web Based PCompiler, you can find the links down below. 
-One more thing I want to say that no Delphi can be involved in the Pascal Corrections! The only library (import/uses) than can be used is Wincrt/Crt (Due to National Exams Regulations).
-Note that Records are replaced with Arrays of Records due to Covid-19 affecting the program.
+PASCAL:
+To get started for Pascal, You have to download a Pascal Compiler, I personally use PascalXE. I also recommend PCompiler (a web based IDE that a friend made). <br>
+To install PascalXE or the Web Based PCompiler, you can find the links down below. <br>
+One more thing I want to say that no Delphi can be involved in the Pascal Corrections! The only library (import/uses) than can be used is Wincrt/Crt (Due to National Exams Regulations).<br>
+Note that Records are replaced with Arrays of Records due to Covid-19 affecting the program.<br>
+
+JS/PHP/HTML:
+To get started for JS/PHP/HTML, You have to download an old version of Easyphp (2.0) or else nothing will work (And again due to regulations I cannot update). You can also find the download links down bellow. For the IDE/Designer you can use anything you'd like as long as it doesn't over add CSS/JS/PHP components.<br>
+No Regex can be used in both PHP and JS.<br>
+Note that PHP is the deprecated version.<br>
 
 ### Prerequisites
 
 PascalXE / PCompiler:
 * https://sourceforge.net/projects/pascalxe/files/Pascal%20XE-2.1.0.322-Setup.exe/download
-* https://hotdogishot.github.io/PCompiler/
-
+* https://hotdogishot.github.io/PCompiler/ <br>
+Easyphp 2.0:
+* https://phpsources.net/script/php/easyphp/78-5_easyphp,2.0b1
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Run any .Pas file I uploaded then click on Execute button.
+For pascal, just run the .pas file and PascalXE will open up.
+For JS/PHP/HTML Files and running them locally you have to do the following:
+  <ol>
+    <li>Open Easyphp.</li>
+    <li>Ignore the update notification.</li>
+    <li>Right click on the tray icon then click administration.</li>
+  </ol>
+Once there, You can access on PhpMyAdmin pannel and localweb which is located in Easyphp installation folder in 'www'. 
 
 <!-- ROADMAP -->
 ## Roadmap
