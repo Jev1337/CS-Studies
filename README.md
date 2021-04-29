@@ -59,7 +59,7 @@
     <li>
       <a href="#about-the-corrections">About The Corrections</a>
       <ul>
-        <li><a href="#made-with">Coded With</a></li>
+        <li><a href="#made-with">Made With</a></li>
       </ul>
     </li>
     <li>
