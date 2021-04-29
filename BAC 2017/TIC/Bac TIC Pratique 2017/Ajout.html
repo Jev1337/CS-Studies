@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Document sans nom</title>
+<script language="javascript">
+	function Espaces(ch){
+		while (ch.charAt(0) == ' '){
+			ch=ch.substr(1);
+		}
+		while (ch.charAt(ch.length -1) == ' '){
+			ch=ch.substr(0,ch.length -1);
+		}
+		while (ch.indexOf('  ')!=-1){
+			ch1=ch.substr(0,ch.indexOf('  ')+1);
+			ch2=ch.substr(ch.indexOf('  ')+2);
+			ch=ch1+ch2;	
+		}
+		ch = ch.charAt(0).toUpperCase() + ch.substr(1);
+		for (i=0;i<ch.length;i++)
+			if (ch.charAt(i) == ' ') {
+				ch1=ch.substr(0,i);
+				ch2=ch.charAt(i+1).toUpperCase() + ch.substr(i+2);
+				ch=ch1+' '+ch2;
+			}
+		return ch;
+	}
+	function alpha(ch){
+		alphabet='ABCDEFGHIJKLMNOPQRTSUVWXYZ';
+		ch=ch.toUpperCase();
+		for(i=0;i<ch.length;i++){
+			if(alphabet.indexOf(ch.charAt(i)) == -1){
+				return false;
+			}
+		}
+		return true;
+	}
+	function num(ch){
+		chf='1234567890';
+		for(i=0;i<ch.length;i++){
+			if(chf.indexOf(ch.charAt(i)) == -1){
+				return false;
+			}
+		}
+		return true;	
+	}
+	function Verif(){
+			if ((form1.textbox1.value.charAt(0) != '0' && form1.textbox1.value.charAt(0) != '1') || form1.textbox1.value.length != 8 || num(form1.textbox1.value) == false){
+				alert('Erreur 01: Le champ CIN doit être de 8 Chiffres et commencant par 0 ou 1!');
+				return false;
+			}
+		if (form1.textbox2.value.length < 3 || form1.textbox2.value.length > 30 || alpha(form1.textbox2.value.length) == false){
+			alert('Erreur 02: Le champ Nom doit être de 3 à 30 lettres!');
+			return false;
+		}
+		if (form1.textbox3.value.length < 3 || form1.textbox3.value.length > 30 || alpha(form1.textbox3.value.length) == false){
+			alert('Erreur 03: Le champ Prenom doit être de 3 à 30 lettres!');
+			return false;
+		}
+		if (form1.textbox4.value.length != 8 || form1.textbox4.value.charAt(0)=='0' || num(form1.textbox4.value) == false){
+			alert('Erreur 04: Le champ tel doit être composé de 8 chiffres dont le premier est différent de 0');
+			return false;
+		}
+		if (form1.S.selectedIndex == 0){
+			alert('Erreur 05: Il faut selectionner un article!');
+			return false;
+		}
+		
+		if (isNaN(form1.textbox5.value) || form1.textbox5.value.length ==0 || Number(form1.textbox5.value) < 0){
+			alert('Erreur 06: Le prix proposé doit être un entier strictement positif');
+			return false;
+		}
+	}
+</script>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="Ajout.php" onSubmit="return Verif();">
+<fieldset><legend>Proposition d'une offre</legend>
+    <table width="279" border="0">
+      <tr>
+        <td>Cin:</td>
+        <td><label> 
+          <input name="textbox1" type="text" id="textbox1"/>
+        </label></td>
+      </tr>
+      <tr>
+        <td>Nom: </td>
+        <td><label>
+           <input name="textbox2" type="text" id="textbox2" />
+        </label></td>
+      </tr>
+      <tr>
+        <td>Pr&eacute;nom:</td>
+        <td><label>
+          <input name="textbox3" type="text" id="textbox3" />
+        </label></td>
+      </tr>
+      <tr>
+        <td>Tel:</td>
+        <td><label>
+          <input name="textbox4" type="text" id="textbox4" />
+        </label></td>
+      </tr>
+    </table>
+	<hr />
+	<table width="460" border="0">
+      <tr>
+        <td width="191">Article: </td>
+        <td width="259"><label>
+          <select name="S" id="S">
+            <option selected="selected">S&eacute;lectionner un article</option>
+            <option value="120">Les gants du gardien Attouga</option>
+            <option value="212">Voiture 202 Bh</option>
+            <option value="36">Luth du Hedi Jouini</option>
+            <option value="8520">Manuscrit d'Abou el Kacem Echebbi</option>
+          </select>
+        </label></td>
+      </tr>
+      <tr>
+        <td>Prix propos&eacute;: </td>
+        <td><label>
+          <input name="textbox5" type="text" id="textbox5" />
+        </label>
+        (en DT)</td>
+      </tr>
+    </table>
+	<br />
+    <label>
+    <input type="reset" name="Submit" value="Annuler" />
+    </label>
+    <label>
+    <input type="submit" name="Submit2" value="Valider" />
+    </label>
+</fieldset>
+</form>
+</body>
+</html>
