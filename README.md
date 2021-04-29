@@ -59,7 +59,7 @@
     <li>
       <a href="#about-the-corrections">About The Corrections</a>
       <ul>
-        <li><a href="#coded-with">Coded With</a></li>
+        <li><a href="#made-with">Coded With</a></li>
       </ul>
     </li>
     <li>
@@ -82,10 +82,10 @@
 <div align="center"><a href="https://sourceforge.net/projects/pascalxe/" target="_blank"><img src="icon.png" alt="Logo" width="135" height="135" style="border:0px;margin:100px;clear:both;"></a> + <a href="https://www.freepascal.org/" target="_blank"><img src="fpc.png" alt="Logo" width="135" height="135" style="border:0px;margin:100px;clear:both;"></a> + <a href="https://www.easyphp.org/" target="_blank"><img src="ez.png" alt="Logo" width="135" height="135" style="border:0px;margin:100px;clear:both;"></a></div>
 
 
-### Coded With
+### Made With
 
-* []()FPC (FreePascal)
-* []()Using PascalXE IDE
+* []()FPC (FreePascal) Using PascalXE IDE
+* []()Easyphp v2.0
 
 <!-- GETTING STARTED -->
 ## Getting Started
