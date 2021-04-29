@@ -90,13 +90,13 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-PASCAL:
+PASCAL:<br>
 To get started for Pascal, You have to download a Pascal Compiler, I personally use PascalXE. I also recommend PCompiler (a web based IDE that a friend made). <br>
 To install PascalXE or the Web Based PCompiler, you can find the links down below. <br>
 One more thing I want to say that no Delphi can be involved in the Pascal Corrections! The only library (import/uses) than can be used is Wincrt/Crt (Due to National Exams Regulations).<br>
 Note that Records are replaced with Arrays of Records due to Covid-19 affecting the program.<br>
 
-JS/PHP/HTML:
+JS/PHP/HTML:<br>
 To get started for JS/PHP/HTML, You have to download an old version of Easyphp (2.0) or else nothing will work (And again due to regulations I cannot update). You can also find the download links down bellow. For the IDE/Designer you can use anything you'd like as long as it doesn't over add CSS/JS/PHP components.<br>
 No Regex can be used in both PHP and JS.<br>
 Note that PHP is the deprecated version.<br>
