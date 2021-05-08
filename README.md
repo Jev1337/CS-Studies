@@ -69,6 +69,7 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
+	<li><a href="#ToDo">To Do List</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
@@ -124,8 +125,11 @@ Once there, You can access on PhpMyAdmin pannel and localweb which is located in
 
 See the [open issues](https://github.com/Jev1337/Pascal-Studies/issues) for a list of proposed features (and known issues).
 
-
-
+<!-- TO DO LIST -->
+## ToDo
+To Do List (For myself and the BAC 2K21):
+* Redo Bac Algo Pratique 2014 (I fear no man)
+* Learn by heart all sort algorithms (Les Tris)
 <!-- LICENSE -->
 ## License
 
@@ -137,6 +141,10 @@ Distributed under the Apache 2.0 License. See `LICENSE` for more information.
 ## Contact
 
 Project Link: [https://github.com/Jev1337/Pascal-Studies](https://github.com/Jev1337/Pascal-Studies)
+
+
+
+
 
 
 
