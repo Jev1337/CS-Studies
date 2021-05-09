@@ -31,7 +31,6 @@ End;
 Procedure Fac_Prim(n:Longint);
 Var
   i,s,j,y,k: Longint;
-  test: Boolean;
 Begin
   j := 0;
   k := 0;
