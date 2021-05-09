@@ -71,12 +71,10 @@ Var
   i,s,j,y: Longint;
   test: Boolean;
 Begin
-  i := 1;
+  i := 0;
   j := 0;
   Repeat
     i := i+1;
-    If Premier(i) Then
-      Begin
         PermierFactoriel(i,test,s,y);
         If test Then
           Begin
@@ -91,7 +89,6 @@ Begin
                 j := j+1;
               End;
           End;
-      End;
   Until j=n;
   i := 1;
   j := 0;
