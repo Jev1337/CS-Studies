@@ -83,7 +83,7 @@ Begin
                 Writeln(Y,' est un Premier Factoriel');
                 j := j+1;
               End;
-            If S<>0 Then
+            If (S<>0) and (j<>n) Then
               Begin
                 Writeln(S,' est un Premier Factoriel');
                 j := j+1;
@@ -104,13 +104,13 @@ Begin
                 Writeln(Y,' est un Premier Primoriel');
                 j := j+1;
               End;
-            If S<>0 Then
+            If (S<>0) and (j<>n) Then
               Begin
                 Writeln(S,' est un Premier Primoriel');
                 j := j+1;
               End;
-            j := j+1;
           End;
+					
       End;
   Until j=n;
 End;
