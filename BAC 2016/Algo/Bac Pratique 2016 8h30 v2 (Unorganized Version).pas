@@ -64,7 +64,7 @@ Begin
             j := j+1;
           End;
       End;
-  Until (j=n) Or (y=n);
+  Until (j=n) and (y=n);
 End;
 Begin
   Saisie(n);
