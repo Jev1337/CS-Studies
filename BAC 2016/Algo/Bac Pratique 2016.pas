@@ -8,7 +8,6 @@ Begin
     Write('Veuillez Saisir n: ');
     Readln(n);
   Until n In [2..5];
-  // Max Possible N is 4 with LongInt
 End;
 Function Fact(x:Longint): Longint;
 Var
