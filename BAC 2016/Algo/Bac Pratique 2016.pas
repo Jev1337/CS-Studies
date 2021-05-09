@@ -1,26 +1,27 @@
 Program bac_2016;
 Uses Wincrt;
 Var
-  n: LongInt;
-Procedure Saisie(Var n:LongInt);
+  n: Longint;
+Procedure Saisie(Var n:Longint);
 Begin
   Repeat
     Write('Veuillez Saisir n: ');
     Readln(n);
-  Until n In [2..5];   // Max Possible N is 4 with LongInt
+  Until n In [2..5];
+  // Max Possible N is 4 with LongInt
 End;
-Function Fact(x:LongInt): LongInt;
+Function Fact(x:Longint): Longint;
 Var
-  s,i: LongInt;
+  s,i: Longint;
 Begin
   s := 1;
   For i:= 1 To x Do
     s := s*i;
   Fact := s;
 End;
-Function Premier(x:LongInt): Boolean;
+Function Premier(x:Longint): Boolean;
 Var
-  i,j: LongInt;
+  i,j: Longint;
 Begin
   j := 0;
   For i:= 1 To x Do
@@ -28,30 +29,30 @@ Begin
       j := j+1;
   Premier := j=2;
 End;
-Procedure PermierFactoriel(x:LongInt; Var foo:Boolean; Var y:LongInt; Var s:LongInt);
+Procedure PermierFactoriel(x:Longint; Var foo:Boolean; Var y:Longint; Var s:Longint);
 Begin
   foo := False;
-	s:=0;
-	y:=0;
+  s := 0;
+  y := 0;
   If (Premier(Fact(x) + 1)) Then
     Begin
       foo := True;
       y := Fact(x) + 1
     End;
   If (Premier(Fact(x) - 1)) Then
-  	Begin
-    	foo := True;
+    Begin
+      foo := True;
       s := Fact(x) - 1;
     End;
 End;
-Procedure PremierPrimoriel(x:LongInt; Var foo:Boolean;Var z:LongInt; var y:LongInt);
+Procedure PremierPrimoriel(x:Longint; Var foo:Boolean;Var z:Longint; Var y:Longint);
 Var
-  i,s: LongInt;
+  i,s: Longint;
 Begin
   foo := False;
   s := 1;
-	y:=0;
-	z:=0;
+  y := 0;
+  z := 0;
   For i:= 1 To x Do
     If Premier(i) Then
       s := s*i;
@@ -61,14 +62,14 @@ Begin
       z := s+1
     End;
   If premier(s-1) Then
-         Begin
-           foo := True;
-           y := s-1;
-         End;
+    Begin
+      foo := True;
+      y := s-1;
+    End;
 End;
-Procedure Fac_Prim(n:LongInt);
+Procedure Fac_Prim(n:Longint);
 Var
-  i,s,j,y: LongInt;
+  i,s,j,y: Longint;
   test: Boolean;
 Begin
   i := 1;
@@ -79,18 +80,18 @@ Begin
       Begin
         PermierFactoriel(i,test,s,y);
         If test Then
-				Begin
-					if Y<>0 Then
-					Begin
-          	Writeln(Y,' est un Premier Factoriel');
-						j := j+1;
-					end;
-					if S<>0 then
-					Begin
-						Writeln(S,' est un Premier Factoriel');
-						j := j+1;
-					end;
-				end;
+          Begin
+            If Y<>0 Then
+              Begin
+                Writeln(Y,' est un Premier Factoriel');
+                j := j+1;
+              End;
+            If S<>0 Then
+              Begin
+                Writeln(S,' est un Premier Factoriel');
+                j := j+1;
+              End;
+          End;
       End;
   Until j=n;
   i := 1;
@@ -101,19 +102,19 @@ Begin
       Begin
         PremierPrimoriel(i,test,s,y);
         If test Then
-				Begin
-      		if Y<>0 Then
-					Begin
-          	Writeln(Y,' est un Premier Primoriel');
-												j := j+1;
-					end;
-					if S<>0 then
-					Begin
-						Writeln(S,' est un Premier Primoriel');
-												j := j+1;
-					end;
-					j := j+1;
-				end;
+          Begin
+            If Y<>0 Then
+              Begin
+                Writeln(Y,' est un Premier Primoriel');
+                j := j+1;
+              End;
+            If S<>0 Then
+              Begin
+                Writeln(S,' est un Premier Primoriel');
+                j := j+1;
+              End;
+            j := j+1;
+          End;
       End;
   Until j=n;
 End;
