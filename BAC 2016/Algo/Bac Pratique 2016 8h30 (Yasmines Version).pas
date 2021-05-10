@@ -20,14 +20,12 @@ End;
 Function premier(x:Integer): Boolean;
 Var
   nb,i: Integer;
-  test: Boolean;
 Begin
   nb := 0;
   For i:=1 To x Do
     If x Mod i =0 Then
       nb := nb+1;
-  test := nb=2;
-  premier := test;
+  premier := nb=2
 End;
 Function SommeP(x:Integer): Longint;
 Var
@@ -94,6 +92,7 @@ Begin
   Until j=n;
 End;
 Begin
+  Writeln(Premier(1));
   Saisie(n);
   Affiche(n);
 End.
