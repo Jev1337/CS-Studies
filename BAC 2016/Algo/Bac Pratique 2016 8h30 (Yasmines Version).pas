@@ -1,111 +1,99 @@
-Uses wincrt;
+Uses Wincrt;
 Var
-n:Integer;
-
-Procedure Saisie(var n:Integer);
+  n: Integer;
+Procedure Saisie(Var n:Integer);
 Begin
-	Repeat
-		writeln('Veuillez Saisir n: ');
-		readln(n);
-	until n in [3..5];
-end;
-
-function fact(x:integer):integer;
+  Repeat
+    Writeln('Veuillez Saisir n: ');
+    Readln(n);
+  Until n In [3..5];
+End;
+Function fact(x:Integer): Integer;
 Var
-    s,i:integer;
+  s,i: Integer;
 Begin
-s:=1;
- for i:=1 to x do
-        s:=s*i;
-fact:=s;
-end;
-
-function premier(x:integer):boolean;
+  s := 1;
+  For i:=1 To x Do
+    s := s*i;
+  fact := s;
+End;
+Function premier(x:Integer): Boolean;
 Var
-    nb,i:integer;
-    test:boolean;
+  nb,i: Integer;
+  test: Boolean;
 Begin
-nb:=0;
-  for i:=2 to (x-1) do
-        if x mod i =0 then
-            nb:=nb+1;
-
-    if nb<>0 then
-        test:=false
-    else
-        test:=true;
-premier:=test;
-end;
-
-Function SommeP(x:Integer): LongInt;
+  nb := 0;
+  For i:=1 To x Do
+    If x Mod i =0 Then
+      nb := nb+1;
+  test := nb=2;
+  premier := test;
+End;
+Function SommeP(x:Integer): Longint;
 Var
-s:LongInt;
-i:Integer;
+  s: Longint;
+  i: Integer;
 Begin
-	s:=1;
-	for i:= 1 to x Do
-		if Premier(i) Then
-			s:=s*i;
-	SommeP:=s;
-end;
-
-function SeekPF(x:Integer): Boolean;
+  s := 1;
+  For i:= 1 To x Do
+    If Premier(i) Then
+      s := s*i;
+  SommeP := s;
+End;
+Function SeekPF(x:Integer): Boolean;
 Var
-i:Integer;
-test:Boolean;
+  i: Integer;
+  test: Boolean;
 Begin
-	i:=0;
-	Repeat
-		i:=i+1;
-		test:= (fact(i)+1 = x) or (fact(i)-1 = x);
-	Until (test) or (fact(i)>=x);
-	seekPf:=test;
-end;
-
-function SeekPP(x:Integer): Boolean;
+  i := 0;
+  Repeat
+    i := i+1;
+    test := (fact(i)+1 = x) Or (fact(i)-1 = x);
+  Until (test) Or (fact(i)>=x);
+  seekPf := test;
+End;
+Function SeekPP(x:Integer): Boolean;
 Var
-i:LongInt;
-test:Boolean;
+  i: Longint;
+  test: Boolean;
 Begin
-	i:=1;
-	Repeat
-		i:=i+1;
-		test:= Premier(i) AND ((SommeP(i)+1 = x) or (SommeP(i)-1 = x));
-	Until (test) or (SommeP(i)>=x);
-	seekPP:=test;
-end;
-
+  i := 1;
+  Repeat
+    i := i+1;
+    test := Premier(i) And ((SommeP(i)+1 = x) Or (SommeP(i)-1 = x));
+  Until (test) Or (SommeP(i)>=x);
+  seekPP := test;
+End;
 Procedure Affiche(n:Integer);
 Var
-i,j:LongInt;
+  i,j: Longint;
 Begin
-		writeln();
-		writeln('Les Premiers Factoriels: ');
-		i:=0;
-		j:=0;
-		Repeat
-			i:=i+1;
-			If SeekPF(i) And Premier(i) Then
-			Begin
-				j:=j+1;
-				writeln(i);
-			end;
-		until j=n;
-		writeln();
-		writeln('Les Premiers Primoriels: ');
-		i:=1;
-		j:=0;
-		Repeat
-			i:=i+1;
-			If SeekPP(i) And Premier(i) Then
-			Begin
-				j:=j+1;
-				writeln(i);
-			end;
-		until j=n;
-end;
-
+  Writeln();
+  Writeln('Les Premiers Factoriels: ');
+  i := 0;
+  j := 0;
+  Repeat
+    i := i+1;
+    If SeekPF(i) And Premier(i) Then
+      Begin
+        j := j+1;
+        Writeln(i);
+      End;
+  Until j=n;
+  Writeln();
+  Writeln('Les Premiers Primoriels: ');
+  i := 1;
+  j := 0;
+  Repeat
+    i := i+1;
+    If SeekPP(i) And Premier(i) Then
+      Begin
+        j := j+1;
+        Writeln(i);
+      End;
+  Until j=n;
+End;
 Begin
-	Saisie(n);
-	Affiche(n);
-end.
+  Saisie(n);
+  Affiche(n);
+End.
