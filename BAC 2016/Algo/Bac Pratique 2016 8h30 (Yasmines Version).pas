@@ -6,7 +6,7 @@ Begin
   Repeat
     Writeln('Veuillez Saisir n: ');
     Readln(n);
-  Until n In [3..5];
+  Until n In [2..5];
 End;
 Function fact(x:Integer): Integer;
 Var
@@ -55,7 +55,7 @@ Var
   i: Longint;
   test: Boolean;
 Begin
-  i := 1;
+  i := 0;
   Repeat
     i := i+1;
     test := Premier(i) And ((SommeP(i)+1 = x) Or (SommeP(i)-1 = x));
@@ -92,7 +92,6 @@ Begin
   Until j=n;
 End;
 Begin
-  Writeln(Premier(1));
   Saisie(n);
   Affiche(n);
 End.
