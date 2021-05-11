@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Document sans nom</title>
+<script language="javascript">
+	function isNb(ch){
+		nb='0123456789';
+		for (i=0;i<ch.length;i++){
+			if (nb.indexOf(ch.charAt(i)) == -1)
+				return false
+		}
+		return true
+	}
+	function Verif(){
+		if (!(isNb(form1.textbox1.value)) || form1.textbox1.value.length !=8 || (form1.textbox1.value.charAt(0) != '1' && form1.textbox1.value.charAt(0) != '0')){
+			alert('Veuillez Saisir Une Valeur CIN correcte!');
+			return false;
+		}
+		if (form1.textbox2.value == ''){
+			alert('Veuillez Saisir Une nouvelle adresse!');
+			return false;
+		}
+	}
+		
+</script>
+</head>
+
+<body><fieldset><legend>Mise à jour d'un abonné</legend>
+<form id="form1" name="form1" method="post" action="Modifier.php" onsubmit="Verif();">
+  <label>Cin:
+  <input name="textbox1" type="text" id="textbox1" />
+  </label>
+  <p>
+    <label>Nouvelle adresse:
+    <textarea name="textbox2" rows="5" id="textbox2"></textarea>
+    </label>
+  </p>
+  <p>
+    <label>
+    <input type="reset" name="Submit" value="Annuler" />
+    </label>
+    <label>
+    <input type="submit" name="Submit2" value="Valider" />
+    </label>
+  </p>
+</form>
+<p>&nbsp;</p>
+</fieldset>
+</body>
+</html>
