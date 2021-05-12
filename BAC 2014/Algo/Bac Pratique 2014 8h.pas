@@ -40,10 +40,9 @@ f:text;
 	Type
 	tab = array[1..200] of Integer;
 	Var
-	k,j,fin,i:Integer;
+	k,j,i:Integer;
 	t,u: tab;
 	ch,aux:string;
-	test:Boolean;
 	Begin
 		Reset(f);
 		ch:='';
