@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Document sans nom</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="Modifier.php">
+  <p>Changement d'abonnement</p>
+  <table width="254" height="149" border="0">
+    <tr>
+      <td width="62">CIN:</td>
+      <td width="182"><label>
+        <input name="textbox1" type="text" id="textbox1" />
+      </label></td>
+    </tr>
+    <tr>
+      <td>D&eacute;bit:</td>
+      <td><label>
+      <select name="S" id="S">
+        <option>Choisissez un d&eacute;bit</option>
+        <option value="15.700">4 M&eacute;ga</option>
+        <option value="21.000">8 M&eacute;ga</option>
+        <option value="26.300">12 M&eacute;ga</option>
+      </select>
+      </label></td>
+    </tr>
+    <tr>
+      <td height="49">Type:</td>
+      <td><p>
+        <label>
+          <input type="radio" name="R" value="A" />
+          Annuel</label>
+        <label>
+          <input type="radio" name="R" value="S" />
+          Semestriel</label>
+        <br />
+      </p></td>
+    </tr>
+  </table>
+  <p>
+    <label>
+    <input type="submit" name="Submit" value="Valider" />
+    </label>
+    <label>
+    <input type="reset" name="Submit2" value="Annuler" />
+    </label>
+</p>
+</form>
+</body>
+</html>
