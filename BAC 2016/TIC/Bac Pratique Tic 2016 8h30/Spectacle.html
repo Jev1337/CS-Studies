@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Document sans nom</title>
+<script language="javascript">
+function Alpha(ch){
+alpha="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ";
+for (i=0;i<ch.length;i++){
+	if (alpha.indexOf(ch.charAt(i))==-1){
+		return false;
+	}
+}
+return true;
+}
+
+function Verif(){
+	if(Alpha(form1.T0.value) == false || form1.T0.value.length < 3 || form1.T0.value.length > 30){
+		alert("Erreur 00: Il faut mettre le nom de l'acteur seuelment avec des lettres alphabetiques et des espaces avec une longeur entre 3 et 30!");
+		return false;
+	}
+	if(form1.S1.selectedIndex == 0){
+		alert('Erreur 01: Il faut sélectionner une pièce!');
+		return false;
+	}
+	if(form1.S2.selectedIndex == 0){
+		alert('Erreur 02: Il faut sélectionner une salle!');
+		return false;
+	}
+	switch (Number(form1.M.options[form1.M.selectedIndex].text)){
+	case 1:case 3:case 5:case 7:case 8:case 10:case 12:foo=31
+	break;
+	case 4:case 6:case 9:case 11:foo=30
+	break;
+	case 2: Number(form1.A.options[form1.A.selectedIndex].text) % 4 == 0 ? foo=29 : foo=28;
+	break;
+	default: foo=0;	
+	}
+	if (foo == 0 || foo<Number(form1.J.options[form1.J.selectedIndex].text)){
+		alert('Erreur 04: Il faut mettre une date correcte dans le champ Mois/Jour');
+		return false;
+	}
+}
+</script>
+</head>
+
+<body><fieldset><legend>Ajout d'un spectacle</legend>
+<form id="form1" name="form1" method="post" action="Ajout.php" onSubmit="return Verif();">
+  <label for="select">Pièce: </label>
+  <p><select name="S1" id="S1">
+      <option selected="selected">Choisir une pi&egrave;ce:</option>
+      <option value="1">Le tr&eacute;sor</option>
+      <option value="2">Le p&eacute;ch&eacute; du succ&egrave;s</option>
+      <option value="3">Le gardien</option>
+      <option value="4">Les soldats de la lune</option>
+      <option value="5">L'&eacute;ternel retour</option>
+    </select>
+  </p>
+  <p>
+    <label for="label">Salle:<br />
+    </label>
+    <select name="S2" id="label">
+      <option selected="selected">Choisir une salle:</option>
+      <option value="TM">Th&eacute;&acirc;tre municipale</option>
+      <option value="QA">Quatri&egrave;me Art</option>
+      <option value="EN">L'Etoile du Nord</option>
+      <option value="EA">Espace Artisto</option>
+    </select>
+  </p>
+  <p>
+    <label for="textfield">Acteur:</label>
+    <br />
+    <input type="text" name="T0" id="T0"/>
+  </p>
+  <label for="textfield"></label>
+  <label for="label"></label>
+  <p>Date du spectacle:<br />
+    <label for="select">J: </label>
+      <select name="J" id="J">
+	  <script language="javascript">
+	  	for (i=1;i<=31;i++){
+	  	document.write('<option value ="'+i+'">'+i+'</option>');
+		}
+	  </script>
+      </select>
+      <label for="label6">M:</label>
+      <select name="M" id="label6">
+	  	  <script language="javascript">
+	  	for (i=1;i<=12;i++){
+	  	document.write('<option value ="'+i+'">'+i+'</option>');
+		}
+	  </script>
+	  
+      </select> 
+      <label for="label7">A</label>
+      <select name="A" id="label7">
+	  	  <script language="javascript">
+	  	for (i=2021;i<=2050;i++){
+	  	document.write('<option value ="'+i+'">'+i+'</option>');
+		}
+	  </script>
+    </select>
+  </p>
+  <p>
+    <label for="label2"></label>
+  </p>
+  <p>
+    <label for="Submit"></label>
+    <input type="reset" name="Submit" value="Annuler" id="Submit" />
+    <label for="label5"></label>
+    <input type="submit" name="Submit2" value="Ajouter" id="label5" />
+  </p>
+</form>
+</fieldset>
+</body>
+</html>
