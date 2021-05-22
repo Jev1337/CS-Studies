@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Document sans nom</title>
+<script language="javascript">
+	function AlphaMaj(ch,s){
+		var a="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		if (s==true)
+			a=a+a.toLowerCase()+" ";
+		for(i=0;i<ch.length;i++){
+			if (a.indexOf(ch.charAt(i))== -1){
+				return false;
+			}
+		}
+		return true;
+	}
+	function Chiff(ch){
+		var a="0123456789";
+				for(i=0;i<ch.length;i++){
+			if (a.indexOf(ch.charAt(i))== -1){
+				return false;
+			}
+		}
+		return true;	
+	}
+	function Verif(){
+		if (form1.T1.value.length != 4 || !AlphaMaj(form1.T1.value.substr(0,2),false) || !Chiff(form1.T1.value.substr(2,2))){
+			alert('Veuillez saisir un code correcte!');
+			return false;
+		}
+		if (form1.T2.value.length < 7 || !AlphaMaj(form1.T2.value,true)){
+			alert('Veuillez saisir un Nom Prenom correcte!');
+			return false;
+		}
+		if (form1.T3.value == '' || !Chiff(form1.T3.value) || Number(form1.T3.value) < 10){
+			alert('Veuillez Saisir un Age correcte!');
+			return false;
+		}
+		if(form1.T4.value.length < 6 || form1.T4.value.indexOf('@')== -1 || form1.T4.value.indexOf('.') == -1 || form1.T4.value.indexOf('@') > form1.T4.value.indexOf('.')){
+			alert('Veuillez Saisir un Email Correcte!');
+			return false;
+		}
+		if(form1.J.selectedIndex == 0 || form1.M.selectedIndex == 0 || form1.A.selectedIndex == 0){
+			alert('Selectionnez une date correcte!');
+			return false;
+		}
+		if(form1.R1[0].checked == false && form1.R1[1].checked == false && form1.R1[2].checked == false){
+			alert('Veuillez Selectionner une Discipline!');
+			return false;
+		}
+		if(form1.T5.value =='' || isNaN(form1.T5.value)){
+			alert('Veuillez Saisir un Record correcte!');
+			return false;
+		}
+	}
+</script>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="Inscription.php" onsubmit="return Verif();">
+<fieldset><legend>Athlète</legend>
+    <p>
+      <label for="textfield">Code: </label>
+      <input type="text" name="T1" id="T1" />
+      <br />
+      <label for="label">Nom Prénom:</label>
+      <input type="text" name="T2" id="label" />
+      <br />
+      <label for="label2">Age:</label>
+      <input type="text" name="T3" id="label2" />
+      <br />
+      <label for="label3">Email:</label>
+      <input type="text" name="T4" id="label3" />
+    </p>
+    </fieldset>
+	<fieldset><legend>Compétition</legend>
+	<p>Date de la comp&eacute;tition: 
+	  <label for="select"></label>
+	  <select name="J" id="J">
+	    <option>Jour</option>
+		<script language="javascript">
+			for(i=1;i<=31;i++){
+				document.write('<option value="'+i+'">'+i+'</option>');
+			}
+		</script>
+      </select>
+	  <label for="label4"></label>
+	  <select name="M" id="label4">
+	    <option>Mois</option>
+		<script language="javascript">
+			for(i=1;i<=12;i++){
+				document.write('<option value="'+i+'">'+i+'</option>');
+			}
+		</script>
+      </select>
+	  <label for="label5"></label>
+	  <select name="A" id="label5">
+	    <option>Ann&eacute;e</option>
+		<script language="javascript">
+			for(i=2000;i<=2025;i++){
+				document.write('<option value="'+i+'">'+i+'</option>');
+			}
+		</script>
+      </select>
+	  <br />
+	  Discipline: 
+	  <label>
+	  <input type="radio" name="R1" value="Natation" />
+Natation</label>
+	  <label>
+	  <input type="radio" name="R1" value="Tennis" />
+Tennis</label>
+	  <label>
+	  <input type="radio" name="R1" value="Course" />
+Course</label>
+	  <br />
+	  <label for="label6">Record: </label>
+	  <input type="text" name="T5" id="label6" />
+	</p>
+	<hr />
+	</fieldset>
+	<input name="" type="submit" value="Confirmer" />
+    <label for="Submit"></label>
+    <input type="reset" name="Submit" value="Annuler" id="Submit" />
+</form>
+</body>
+</html>
