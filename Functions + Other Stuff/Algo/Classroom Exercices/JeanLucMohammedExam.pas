@@ -1,97 +1,91 @@
-program JeanLucMomo;
-uses wincrt;
+Program JeanLucMomo;
+Uses Wincrt;
 Type
-mat = array[1..225,1..225] of char;
+  mat = Array[1..225,1..225] Of Char;
 Var
-N:Integer;
-M:mat;
-F:text;
+  N: Integer;M: mat;F: Text;
+Function verif(ch:String): Boolean;
+Var
+  test: Boolean;
+  i: Integer;
+Begin
+  i := 0;
+  Repeat
+    i := i+1;
+    test := Upcase(ch[i]) In ['A'..'Z','0'..'9'];
+  Until (test = False) Or (i=Length(ch)) ;
+  verif := test;
+End;
 
-Function verif(ch:string):Boolean;
+Procedure Saisie (Var N :Integer);
+Begin
+  Repeat
+    Writeln('Veuillez Saisir N agences: ');
+    Readln(n);
+  Until (n In [3..15])
+End;
+Procedure Transfert(Var res:String;N:Integer;m:mat);
 Var
-test:Boolean;
-i:Integer;
+  i,j: Integer;
 Begin
-	i:=0;
-	Repeat
-		i:=i+1;
-		test:=Upcase(ch[i]) in ['A'..'Z','0'..'9'];
-	until (test = false) or (i=Length(ch)) ;
-	verif:=test;
-end;
-Procedure Saisie (var N :Integer);
+  For i:= 1 To n Do
+    res := res+M[i,i];
+  For i:= 2 To n Do
+    For j:= 1 To i-1 Do
+      res := res+M[i,j];
+  For i:= 1 To n-1 Do
+    For j:=i+1 To n Do
+      res := res+M[i,j];
+End;
+Function Tri(ch:String): String;
+Var
+  permut: Boolean;
+  i: Integer;
+  aux: Char;
 Begin
-	Repeat
-		writeln('Veuillez Saisir N agences: ');
-		readln(n);
-	until (n in [3..15])
-end;
+  Repeat
+    permut := False;
+    For i:= 1 To Length(ch)-1 Do
+      If ch[i] > ch[i+1] Then
+        Begin
+          aux := ch[i];
+          ch[i] := ch[i+1];
+          ch[i+1] := aux;
+          permut := True;
+        End;
+  Until permut=False;
+  tri := ch;
+End;
 
-Procedure Transfert(var res:string;N:Integer;m:mat);
+Procedure Remplir(Var M:mat; N:Integer; Var f:Text);
 Var
-i,j:Integer;
+  i,j: Integer;
+  ch,res: String;
 Begin
-		for i:= 1 to n Do
-			res:=res+M[i,i];
-		for i:= 2 to n Do
-			for j:= 1 to i-1 Do
-				res:=res+M[i,j];
-		for i:= 1 to n-1 Do
-			for j:=i+1 to n do
-				res:=res+M[i,j];
-end;
-
-Function Tri(ch:string): string;
-Var
-permut:Boolean;
-i:Integer;
-aux:char;
+  Rewrite(f);
+  Repeat
+    Writeln('Veuillez Saisir le mot de passe: ');
+    Readln(ch);
+  Until verif(ch) And (Length(ch) <= n*n);
+  While Length(ch) <> n*n Do
+    ch := ch+ Chr(Random(26)+Ord('A'));
+  For i:= 1 To n Do
+    For j:= 1 To n Do
+      Begin
+        M[i,j] := ch[1];
+        Delete(ch,1,1);
+      End;
+  res := '';
+  Transfert(Res,N,M);
+  i := 0;
+  Repeat
+    Writeln(f,tri(Copy(res,1,n)));
+    Delete(res,1,n);
+  Until res='';
+  Close(f);
+End;
 Begin
-	Repeat
-		permut:=false;
-		for i:= 1 to Length(ch)-1 Do
-			if ch[i] > ch[i+1] Then
-			Begin
-				aux:=ch[i];
-				ch[i]:=ch[i+1];
-				ch[i+1]:=aux;
-				permut:=true;
-			end;
-	until permut=false;
-	tri:=ch;
-end;
-Procedure Remplir(var M:mat; N:Integer; var f:text);
-Var
-i,j:Integer;
-ch,res:string;
-Begin
-rewrite(f);
-		Repeat
-			writeln('Veuillez Saisir le mot de passe: ');
-			readln(ch);
-		until verif(ch) and (length(ch) <= n*n);
-		while Length(ch) <> n*n Do
-			ch:=ch+ Chr(Random(26)+Ord('A'));
-		for i:= 1 to n Do
-			for j:= 1 to n Do
-			Begin
-				M[i,j]:=ch[1];
-				delete(ch,1,1);
-			end;
-		res:='';
-		Transfert(Res,N,M);
-		for i:= 1 to n Do
-		Begin
-			for j:= 1 to n Do
-				ch:=ch+res[j];
-			writeln(f,Tri(ch));
-			ch:='';
-			delete(res,1,n);
-		end;
-close(f);
-end;
-Begin
-	assign(F,'Mots.txt');
-	Saisie(N);
-	Remplir(M,N,F);
-end.
+  Assign(F,'Mots.txt');
+  Saisie(N);
+  Remplir(M,N,F);
+End.
