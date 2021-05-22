@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Document sans nom</title>
+<style type="text/css">
+<!--
+.Style3 {
+	font-size: 36px;
+	font-weight: bold;
+}
+-->
+</style>
+<script language="javascript">
+	function Chiff(ch){
+		var a="0987654321";
+		for(i=0;i<ch.length;i++){
+			if (a.indexOf(ch.charAt(i))==-1){
+				return false;
+			}
+		}
+		return true;
+	}
+	function Verif(){
+		if(form1.T1.value.substr(0,3) != "4SI" || !Chiff(form1.T1.value.substr(3,2))){
+			alert("Veuillez Saisir un numéro correcte pour l'éleve!");
+			return false;
+		}
+		if(form1.T2.value == "" || isNaN(form1.T2.value) || form1.T2.value > 20 ||form1.T2.value < 0){
+			alert("Veuillez Saisir une note DC correcte pour l'éleve!");
+			return false;
+		}
+		if(form1.T3.value == "" || isNaN(form1.T3.value) || form1.T3.value > 20 ||form1.T3.value < 0){
+			alert("Veuillez Saisir une note DS correcte pour l'éleve!");
+			return false;
+		}
+		if(form1.S.selectedIndex == 0){
+			alert("Veuillez Selectionner une note DS correcte pour l'éleve!");
+			return false;
+		}
+	}
+</script>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="Saisir.php" onSubmit="return Verif();">
+  <div align="center">
+    <p class="Style3">La saisie des notes  </p>
+    <p align="left">
+      
+        <label>Numéro de l'élève:
+        <input name="T1" type="text" id="T1" />
+        </label>
+	<hr />
+		<div align="left">
+		  <table width="802" height="122" border="0">
+            <tr>
+              <td><div align="center"><strong>Mati&egrave;res</strong></div></td>
+              <td><div align="center"><strong>Note du DC </strong></div></td>
+              <td><div align="center"><strong>Note du DS </strong></div></td>
+            </tr>
+            <tr>
+              <td><label>
+                <div align="center">
+                  <select name="S" id="S">
+                    <option>Choisir une mati&egrave;re</option>
+                    <option value="Algo">Algorithmique et Programmation</option>
+                    <option value="BD">Bases de donn&eacute;es</option>
+                    <option value="TIC">Technologies de l'Information et de la Communication</option>
+                  </select>
+                </div>
+              </label></td>
+              <td><label>
+                <input name="T2" type="text" id="T2" />
+              </label></td>
+              <td><label>
+                <input name="T3" type="text" id="T3" />
+              </label></td>
+            </tr>
+          </table>
+		  <label>
+		  <input type="reset" name="Submit" value="Annuler" />
+		  </label>
+		  <label>
+		  <input type="submit" name="Submit2" value="Valider" />
+		  </label>
+		  <br />
+		  </p>
+  </div></div>
+</form>
+</body>
+</html>

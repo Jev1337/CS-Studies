@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Document sans nom</title>
+<script language="javascript">
+	function Chiff(ch){
+		var a="0987654321";
+		for(i=0;i<ch.length;i++){
+			if (a.indexOf(ch.charAt(i))==-1){
+				return false;
+			}
+		}
+		return true;
+	}
+	function Verif(){
+		if(form1.T1.value.substr(0,3) != "4SI" || !Chiff(form1.T1.value.substr(3,2))){
+			alert("Veuillez Saisir un numéro correcte pour l'éleve!");
+			return false;
+		}
+	}
+</script>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="Bulletin.php"><fieldset><legend>Bulletin des notes</legend>
+    <p>
+      <label>Numéro de l'élève:
+      <input name="T1" type="text" id="T1" />
+      </label>
+    </p>
+    <p>
+      <label>
+      <input type="reset" name="Submit" value="Annuler" />
+      </label>
+      <label>
+      <input type="submit" name="Submit2" value="Afficher" />
+      </label>
+    </p>
+</fieldset>
+</form>
+</body>
+</html>
