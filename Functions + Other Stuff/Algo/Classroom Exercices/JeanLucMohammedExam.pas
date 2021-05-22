@@ -17,13 +17,6 @@ Begin
   verif := test;
 End;
 
-Procedure Saisie (Var N :Integer);
-Begin
-  Repeat
-    Writeln('Veuillez Saisir N agences: ');
-    Readln(n);
-  Until (n In [3..15])
-End;
 Procedure Transfert(Var res:String;N:Integer;m:mat);
 Var
   i,j: Integer;
@@ -57,35 +50,38 @@ Begin
   tri := ch;
 End;
 
-Procedure Remplir(Var M:mat; N:Integer; Var f:Text);
+Procedure Remplir(Var M:mat; Var N:Integer; Var f:Text);
 Var
   i,j: Integer;
   ch,res: String;
 Begin
   Rewrite(f);
   Repeat
-    Writeln('Veuillez Saisir le mot de passe: ');
-    Readln(ch);
-  Until verif(ch) And (Length(ch) <= n*n);
-  While Length(ch) <> n*n Do
-    ch := ch+ Chr(Random(26)+Ord('A'));
-  For i:= 1 To n Do
-    For j:= 1 To n Do
-      Begin
-        M[i,j] := ch[1];
-        Delete(ch,1,1);
-      End;
-  res := '';
-  Transfert(Res,N,M);
-  i := 0;
-  Repeat
-    Writeln(f,tri(Copy(res,1,n)));
-    Delete(res,1,n);
-  Until res='';
-  Close(f);
+    Writeln('Veuillez Saisir N agences: ');
+    Readln(n);
+  Until (n In [3..15])
+        Repeat
+        Writeln('Veuillez Saisir le mot de passe: ');
+  Readln(ch);
+Until verif(ch) And (Length(ch) <= n*n);
+While Length(ch) <> n*n Do
+  ch := ch+ Chr(Random(26)+Ord('A'));
+For i:= 1 To n Do
+  For j:= 1 To n Do
+    Begin
+      M[i,j] := ch[1];
+      Delete(ch,1,1);
+    End;
+res := '';
+Transfert(Res,N,M);
+i := 0;
+Repeat
+  Writeln(f,tri(Copy(res,1,n)));
+  Delete(res,1,n);
+Until res='';
+Close(f);
 End;
 Begin
   Assign(F,'Mots.txt');
-  Saisie(N);
   Remplir(M,N,F);
 End.
