@@ -3,7 +3,10 @@ Uses Wincrt;
 Type
   mat = Array[1..225,1..225] Of Char;
 Var
-  N: Integer;M: mat;F: Text;
+  N: Integer;
+  M: mat;
+  F: Text;
+
 Function verif(ch:String): Boolean;
 Var
   test: Boolean;
@@ -16,7 +19,6 @@ Begin
   Until (test = False) Or (i=Length(ch)) ;
   verif := test;
 End;
-
 Procedure Transfert(Var res:String;N:Integer;m:mat);
 Var
   i,j: Integer;
@@ -30,6 +32,7 @@ Begin
     For j:=i+1 To n Do
       res := res+M[i,j];
 End;
+
 Function Tri(ch:String): String;
 Var
   permut: Boolean;
@@ -49,7 +52,6 @@ Begin
   Until permut=False;
   tri := ch;
 End;
-
 Procedure Remplir(Var M:mat; Var N:Integer; Var f:Text);
 Var
   i,j: Integer;
@@ -60,8 +62,8 @@ Begin
     Writeln('Veuillez Saisir N agences: ');
     Readln(n);
   Until (n In [3..15])
-        Repeat
-        Writeln('Veuillez Saisir le mot de passe: ');
+Repeat
+  Writeln('Veuillez Saisir le mot de passe: ');
   Readln(ch);
 Until verif(ch) And (Length(ch) <= n*n);
 While Length(ch) <> n*n Do
