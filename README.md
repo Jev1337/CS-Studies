@@ -81,7 +81,7 @@
 ## About The Corrections
 
 <div align="center"><a href="https://sourceforge.net/projects/pascalxe/" target="_blank"><img src="icon.png" alt="Logo" width="135" height="135" style="border:0px;margin:100px;clear:both;"></a> + <a href="https://www.freepascal.org/" target="_blank"><img src="fpc.png" alt="Logo" width="135" height="135" style="border:0px;margin:100px;clear:both;"></a> + <a href="https://www.easyphp.org/" target="_blank"><img src="ez.png" alt="Logo" width="135" height="135" style="border:0px;margin:100px;clear:both;"></a></div>
-
+EDIT: I Passed the year 2021 with a 15.93/20 (Europe) or 79.65/100 (UAE) or A- (US) or 3.7 GPA
 
 ### Made With
 
